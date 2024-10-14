@@ -3,6 +3,7 @@ package pr5;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 public class FootballMatch extends JFrame {
     private int scoreMilan = 0;
@@ -11,6 +12,7 @@ public class FootballMatch extends JFrame {
     private JLabel resultLabel;
     private JLabel lastScorerLabel;
     private JLabel winnerLabel;
+
 
     public FootballMatch() {
         setTitle("Football Match Score");
@@ -25,6 +27,7 @@ public class FootballMatch extends JFrame {
         JButton madridButton = new JButton("Real Madrid");
         madridButton.setBounds(250, 50, 100, 30);
         add(madridButton);
+
 
         resultLabel = new JLabel("Result: 0 X 0");
         resultLabel.setBounds(150, 10, 200, 30);
@@ -53,7 +56,11 @@ public class FootballMatch extends JFrame {
                 updateScore("Real Madrid");
             }
         });
+
+
     }
+
+
 
     private void updateScore(String lastScorer) {
         resultLabel.setText("Result: " + scoreMilan + " X " + scoreMadrid);

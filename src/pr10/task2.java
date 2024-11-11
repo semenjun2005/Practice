@@ -1,4 +1,4 @@
-package task10;
+package pr10;
 
 import java.util.ArrayList;
 import java.util.Collections;

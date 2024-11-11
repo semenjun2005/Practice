@@ -1,4 +1,4 @@
-package task10;
+package pr10;
 
 public class Student {
     private String firstName;

@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class task2 {
+public class task3 {
     public static void main(String[] args) {
 
         List <Student> list1 = new ArrayList<>();
@@ -29,7 +29,6 @@ public class task2 {
                 return s1.getLastName().compareTo(s2.getLastName());
             }
         });
-
 
         System.out.println("Отсортированный список студентов:");
         for (Student student : combinedList) {

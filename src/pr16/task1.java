@@ -15,10 +15,8 @@ public class task1 {
         frame.setSize(400, 300);
         frame.setLayout(new BorderLayout());
 
-        // Генерация случайного числа
         targetNumber = (int) (Math.random() * 21);
 
-        // Центральная панель с текстовым полем и кнопкой
         JPanel centerPanel = new JPanel();
         centerPanel.setLayout(new FlowLayout());
         JLabel promptLabel = new JLabel("Введите число от 0 до 20: ");
@@ -30,7 +28,7 @@ public class task1 {
         centerPanel.add(guessButton);
         frame.add(centerPanel, BorderLayout.CENTER);
 
-        // Обработчик кнопки "Угадать"
+
         guessButton.addActionListener(e -> {
             try {
                 int guess = Integer.parseInt(numberField.getText());
@@ -52,30 +50,25 @@ public class task1 {
             }
         });
 
-        // Обработчики событий мыши для разных областей
         JLabel northLabel = new JLabel("САО", SwingConstants.CENTER);
         JLabel southLabel = new JLabel("ЮАО", SwingConstants.CENTER);
         JLabel eastLabel = new JLabel("ВАО", SwingConstants.CENTER);
         JLabel westLabel = new JLabel("ЗАО", SwingConstants.CENTER);
 
-        // Добавляем области в макет
         frame.add(northLabel, BorderLayout.NORTH);
         frame.add(southLabel, BorderLayout.SOUTH);
         frame.add(eastLabel, BorderLayout.EAST);
         frame.add(westLabel, BorderLayout.WEST);
 
-        // Обработчики мыши
         addMouseListenerToArea(northLabel, "Добро пожаловать в САО");
         addMouseListenerToArea(southLabel, "Добро пожаловать в ЮАО");
         addMouseListenerToArea(eastLabel, "Добро пожаловать в ВАО");
         addMouseListenerToArea(westLabel, "Добро пожаловать в ЗАО");
         addMouseListenerToArea(centerPanel, "Добро пожаловать в ЦАО");
 
-        // Отображение окна
         frame.setVisible(true);
     }
 
-    // Метод для добавления обработчика мыши
     private static void addMouseListenerToArea(JComponent component, String message) {
         component.addMouseListener(new MouseAdapter() {
             @Override
